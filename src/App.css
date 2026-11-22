@@ -1,0 +1,352 @@
+/* ============================================================
+   PORTFOLIO — simple, plain stylesheet (converted from style.css)
+   ============================================================ */
+
+/* ---------- THEME COLORS ---------- */
+:root {
+  --accent: #546e7a;
+  --bg: #ffffff;
+  --text: #1c1c1c;
+  --muted: #6b6b6b;
+  --border: #e0e0e0;
+  --card-bg: #fafafa;
+}
+
+/* ---------- BASE ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-links a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 8px;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+/* ---------- HOME ---------- */
+.avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.name {
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* ---------- ABOUT ---------- */
+.bio {
+  margin-bottom: 24px;
+  max-width: 70ch;
+}
+
+.facts {
+  list-style: none;
+}
+
+.facts li {
+  margin-bottom: 8px;
+}
+
+.facts strong {
+  display: inline-block;
+  width: 100px;
+}
+
+/* ---------- PROJECTS ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- SKILLS ---------- */
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+/* ---------- EXPERIENCE ---------- */
+.job {
+  margin-bottom: 32px;
+}
+
+.job h3 {
+  margin-bottom: 4px;
+}
+
+.job-meta {
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.job p {
+  color: var(--muted);
+}
+
+/* ---------- CONTACT ---------- */
+.contact-line {
+  margin-bottom: 8px;
+}
+
+.socials {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.social-link {
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.social-link:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ============ DROPDOWN ============ */
+.dropdown {
+  position: relative;
+  list-style: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 0;
+  z-index: 100;
+  list-style: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu a {
+  color: var(--text);
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+  background: var(--border);
+  color: var(--accent);
+}
+
+.dropdown-menu a.active {
+  color: var(--accent);
+  font-weight: 600;
+  background: var(--muted);
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.dropdown-menu a.external {
+  position: relative;
+  padding-right: 20px;
+}
+
+.dropdown-menu a.external::after {
+  content: "↗";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.65em;
+  color: var(--muted);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu a.external:hover::after {
+  color: var(--accent);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+#dropdownBtn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#dropdownBtn:hover {
+  color: var(--accent);
+}
+
+#dropdownBtn:focus {
+  outline: none;
+  color: var(--accent);
+}
+
+.dropdown-arrow {
+  font-size: 0.6em;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
